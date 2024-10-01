@@ -39,15 +39,81 @@ Nos pidieron:
 Modificamos el archivo de configuracion:
 
 ```bash
-#Politica minima
+# Política mínima (débil)
 minlen = 6
+# Requiere al menos 1 símbolo
+minclass = 1
 
-#Politica media
-minlen = 8 #Requiere 
-
+# Política media
+minlen = 8
+# Requiere al menos 1 número, 1 letra mayúscula y 1 símbolo
+minclass = 3
 ucredit = -1
+lcredit = -1
+ocredit = -1
 
-#Politica extrema
+# Política extrema
 minlen = 12
+# Requiere al menos 1 número, 1 letra mayúscula, 1 símbolo y otros caracteres especiales
+minclass = 4
+
+#Aqui uso minClass, ya que abarca (mayusculas, minusculas, digitos y no alfa)
+```
+
+### Politica minima comprobacion:
+
+Comando de comprobacion:
+
+```bash
+pwscore | cambio+
+```
+Resultado:
+```bash
 
 ```
+
+### Politica media comprobacion:
+
+Comando de comprobacion:
+
+```bash
+pwscore | C4mbios*
+```
+Resultado:
+
+```bash
+
+```
+
+
+### Politica extrema comprobacion:
+
+Comando de comprobacion:
+
+```bash
+pwscore | Cambioseguri
+```
+Resultado:
+
+```bash
+
+```
+
+|         |Score    |l.min|Requisitos  |Ejemplos    |
+|---------|---------|-----|------------|------------|
+|No valido|   <40   |  -  |minlen:8    |Procavsion  |
+|         |         |     |            |            |
+|Debil    | 35 - 50 |  6  |minlen:6    |P#k.5n      |
+|         |         |     |ucredit:-1  |            |
+|         |         |     |minclass:-1 |            |
+|         |         |     |lcredit:-1  |            |
+|         |         |     |            |            |
+|Media    | 50 - 80 |  8  |minlen: 8   |Comproar2   |
+|         |         |     |ucredit:1   |            |
+|         |         |     |minclass:1  |            |
+|         |         |     |lcredit:1   |            |
+|         |         |     |            |            |
+|Extrema  |   >80   |  12 |minlen:12   |Comprasion1`|
+|         |         |     |ucredit:-1  |            |
+|         |         |     |minclass:-1 |            |
+|         |         |     |lcredit:-1  |            |
