@@ -69,7 +69,7 @@ pwscore | cambio+
 ```
 Resultado:
 ```bash
-
+40
 ```
 
 ### Politica media comprobacion:
@@ -82,7 +82,7 @@ pwscore | C4mbios*
 Resultado:
 
 ```bash
-
+60
 ```
 
 
@@ -96,7 +96,7 @@ pwscore | Cambioseguri
 Resultado:
 
 ```bash
-
+40
 ```
 
 |         |Score    |l.min|Requisitos  |Ejemplos    |
